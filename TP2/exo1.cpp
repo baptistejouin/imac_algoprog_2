@@ -5,7 +5,16 @@
 
 MainWindow* w = nullptr;
 
-void selectionSort(Array& toSort){
+void selectionSort(Array& toSort) {
+    for (size_t i = 0; i < toSort.size(); i++)
+    {
+        for (uint j=0; j<toSort.size(); j++)
+        {
+            if (toSort.get(j) > toSort.get(i))
+                toSort.swap(i, j);
+        }
+    }
+    
 	// selectionSort
 }
 

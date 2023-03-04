@@ -11,8 +11,8 @@ void recursivQuickSort(Array &toSort, int size)
 	if (size <= 1)
 		return;
 
-	Array &lowerArray = w->newArray(size);
-	Array &greaterArray = w->newArray(size);
+	Array &lowerArray = w->newArray(size - 1);
+	Array &greaterArray = w->newArray(size - 1);
 	int lowerSize = 0, greaterSize = 0; // effectives sizes
 	int pivot = (size - 1) / 2;			// on divise le tableau en deux par la valeur du centre
 

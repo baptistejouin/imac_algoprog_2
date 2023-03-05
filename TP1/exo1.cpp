@@ -10,18 +10,12 @@ long power(long value, long n)
 
     // your code
     if (n == 0)
-    {
         return_and_display(1);
-    }
-    else if (n == 1)
-    {
+    if (n == 1)
         return_and_display(value);
-    }
-
-    value *= power(value, n - 1);
 
     // return_and_display shows the result in the window and returns it
-    return_and_display(value);
+    return_and_display(value * power(value, n - 1));
 }
 
 int main(int argc, char *argv[])

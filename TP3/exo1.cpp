@@ -2,11 +2,31 @@
 #include <QApplication>
 #include <time.h>
 
-MainWindow* w = nullptr;
+MainWindow *w = nullptr;
 using std::size_t;
 
-int binarySearch(Array& array, int toSearch)
+int binarySearch(Array &array, int toSearch)
 {
+	int start = 0, end = array.size();
+
+	while (start < end)
+	{
+		int mid = (start + end) / 2;
+
+		if (toSearch > array.get(mid))
+		{
+			start = mid + 1;
+		}
+		else if (toSearch < array.get(mid))
+		{
+			end = mid;
+		}
+		else
+		{
+			return mid;
+		}
+	}
+
 	return -1;
 }
 
